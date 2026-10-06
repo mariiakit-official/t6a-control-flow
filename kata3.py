@@ -10,5 +10,6 @@
 # Stretch: do the other Kata 3 option too.
 for aisle in range (1,4):
     for shelves in range (1,5):
+        #by default it print from new line, so the end will add space beetween the iteration , such as A1-S1 A1-S2 A1-S3 A1-S4
         print(f"A{aisle}-S{shelves}", end=" ")
     print()    
