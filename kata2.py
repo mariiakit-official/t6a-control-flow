@@ -7,6 +7,9 @@
 # Any other day → Normal operations
 
 # Expected: Day 3: Cycle count, Day 5: Scanner audit, Day 15: FULL AUDIT, Day 30: FULL AUDIT
+
+
+
 months_days = {
     "January": 31,
     "February": 28,
@@ -22,13 +25,12 @@ months_days = {
     "December": 31
 }
 month= 'October'
-day=11
+days_in_month = months_days[month]
+for day in range(1,days_in_month+1):
 
 # dynamicaly determine the month 
-days_in_month = months_days[month]
 
 
-    
 # if day % 3 == 0 and day % 5 == 0:
 #     print(f"Day {day} FULL AUDIT ")
 # elif day % 5 == 0:
@@ -38,13 +40,14 @@ days_in_month = months_days[month]
 # else:
 #     print(f"Normal operations")
 
-for current_day in range(1,days_in_month+1):
-    if current_day  == day:
-        if day %3 == 0 and day % 5== 0:
-            print(f"Day {day} FULL AUDIT")
-        elif day % 5 == 0:
-            print(f"Day {day} Scanner audit")
-        elif day % 3== 0:
-            print(f"Day {day} Cycle count")
-        else:
-            print(f"Normal operations")        
+    for current_day in range(1,days_in_month+1):
+        if current_day  == day:
+            if day %3 == 0 and day % 5== 0:
+                print(f"Day {day} FULL AUDIT")
+            elif day % 5 == 0:
+                print(f"Day {day} Scanner audit")
+            elif day % 3== 0:
+                print(f"Day {day} Cycle count")
+            else:
+                print(f"Day {day} Normal operations")        
+
