@@ -22,18 +22,29 @@ months_days = {
     "December": 31
 }
 month= 'October'
-day=5
+day=11
 
 # dynamicaly determine the month 
 days_in_month = months_days[month]
 
 
     
-if day % 3 == 0 and day % 5 == 0:
-    print(f"Day {day} FULL AUDIT ")
-elif day % 5 == 0:
-    print(f"Day {day} Scanner audit")
-elif day % 3 == 0:
-    print(f"Day {day} Cycle count")
-else:
-    print(f"Normal operations")
+# if day % 3 == 0 and day % 5 == 0:
+#     print(f"Day {day} FULL AUDIT ")
+# elif day % 5 == 0:
+#     print(f"Day {day} Scanner audit")
+# elif day % 3 == 0:
+#     print(f"Day {day} Cycle count")
+# else:
+#     print(f"Normal operations")
+
+for current_day in range(1,days_in_month+1):
+    if current_day  == day:
+        if day %3 == 0 and day % 5== 0:
+            print(f"Day {day} FULL AUDIT")
+        elif day % 5 == 0:
+            print(f"Day {day} Scanner audit")
+        elif day % 3== 0:
+            print(f"Day {day} Cycle count")
+        else:
+            print(f"Normal operations")        
